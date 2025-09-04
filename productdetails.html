@@ -1,29 +1,28 @@
-// ProductDetailPage.jsx
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Product Details</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </header>
 
-export default function ProductDetailPage() {
-  const product = {
-    id: 1,
-    name: "Smartphone",
-    description: "High-performance smartphone with great features.",
-    price: 25000,
-    img: "https://via.placeholder.com/400",
-  };
-
-  return (
-    <motion.div
-      className="p-6 flex flex-col md:flex-row gap-8"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-    >
-      <img src={product.img} alt={product.name} className="w-full md:w-1/2 rounded-2xl shadow-lg" />
-      <div className="flex flex-col gap-4">
-        <h1 className="text-2xl font-bold">{product.name}</h1>
-        <p className="text-gray-600">{product.description}</p>
-        <p className="text-xl font-semibold">₹{product.price}</p>
-        <Button className="w-40">Add to Cart</Button>
-      </div>
-    </motion.div>
-  );
-}
+  <section class="product-detail">
+    <img src="https://via.placeholder.com/250" alt="Product">
+    <div class="info">
+      <h2>Product Name</h2>
+      <p class="price">$45</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Great quality and features.</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+  </section>
+</body>
+</html>
