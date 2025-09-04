@@ -2,35 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <h1>User Dashboard</h1>
-    <nav>
-      <a href="home.html">Home</a>
-      <a href="checkout.html">Checkout</a>
-    </nav>
-  </header>
+<body class="bg-gray-100">
+  <nav class="bg-white shadow p-4 flex justify-between">
+    <h1 class="text-2xl font-bold">Admin Dashboard</h1>
+    <a href="index.html" class="text-blue-600">Back to Shop</a>
+  </nav>
 
-  <section class="dashboard">
-    <h2>Welcome, User!</h2>
-    <div class="stats">
-      <div class="card">
-        <h3>Total Orders</h3>
-        <p>15</p>
-      </div>
-      <div class="card">
-        <h3>Wishlist</h3>
-        <p>5 items</p>
-      </div>
-      <div class="card">
-        <h3>Cart Items</h3>
-        <p>3</p>
-      </div>
+  <main class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="font-bold text-xl">Total Sales</h2>
+      <p class="text-2xl mt-2">$4,500</p>
     </div>
-  </section>
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="font-bold text-xl">Orders</h2>
+      <p class="text-2xl mt-2">120</p>
+    </div>
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="font-bold text-xl">Customers</h2>
+      <p class="text-2xl mt-2">80</p>
+    </div>
+  </main>
 </body>
 </html>
