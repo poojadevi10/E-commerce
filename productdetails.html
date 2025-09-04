@@ -1,0 +1,29 @@
+// ProductDetailPage.jsx
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+export default function ProductDetailPage() {
+  const product = {
+    id: 1,
+    name: "Smartphone",
+    description: "High-performance smartphone with great features.",
+    price: 25000,
+    img: "https://via.placeholder.com/400",
+  };
+
+  return (
+    <motion.div
+      className="p-6 flex flex-col md:flex-row gap-8"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
+      <img src={product.img} alt={product.name} className="w-full md:w-1/2 rounded-2xl shadow-lg" />
+      <div className="flex flex-col gap-4">
+        <h1 className="text-2xl font-bold">{product.name}</h1>
+        <p className="text-gray-600">{product.description}</p>
+        <p className="text-xl font-semibold">₹{product.price}</p>
+        <Button className="w-40">Add to Cart</Button>
+      </div>
+    </motion.div>
+  );
+}
