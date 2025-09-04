@@ -1,29 +1,37 @@
-// DashboardPage.jsx
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ShopEasy</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </header>
 
-const products = [
-  { id: 1, name: "Smartphone", price: 25000, img: "https://via.placeholder.com/150" },
-  { id: 2, name: "Headphones", price: 2000, img: "https://via.placeholder.com/150" },
-  { id: 3, name: "Laptop", price: 55000, img: "https://via.placeholder.com/150" },
-];
-
-export default function DashboardPage() {
-  return (
-    <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-      {products.map((p) => (
-        <motion.div key={p.id} whileHover={{ scale: 1.05 }}>
-          <Card className="rounded-2xl shadow-lg">
-            <img src={p.img} alt={p.name} className="w-full h-40 object-cover rounded-t-2xl" />
-            <CardContent className="p-4">
-              <h2 className="text-lg font-semibold">{p.name}</h2>
-              <p className="text-gray-500">₹{p.price}</p>
-              <Button className="mt-3 w-full">View Details</Button>
-            </CardContent>
-          </Card>
-        </motion.div>
-      ))}
+  <section class="products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Product">
+        <h3>Product 1</h3>
+        <p>$20</p>
+        <a href="product.html" class="btn">View Details</a>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Product">
+        <h3>Product 2</h3>
+        <p>$35</p>
+        <a href="product.html" class="btn">View Details</a>
+      </div>
     </div>
-  );
-}
+  </section>
+</body>
+</html>
